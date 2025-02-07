@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo de Ropa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    .productos {
+      width: 70%;
+    }
+    .producto {
+      display: flex;
+      align-items: center;
+      background-color: #ffdab9;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+    }
+    .producto:nth-child(even) {
+      background-color: #add8e6;
+    }
+    .producto img {
+      width: 100px;
+      height: 110px;
+      margin-right: 15px;
+    }
+    .producto button {
+      background-color: orange;
+      color: black;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .producto button:hover {
+      background-color: #ff8000;
+    }
+    .carrito {
+      width: 25%;
+      background-color: #ffe4c4;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    .carrito h2 {
+      color: #d9534f;
+    }
+    .carrito button {
+      background-color: #d9534f;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+      width: 100%;
+    }
+    .carrito button:hover {
+      background-color: #c9302c;
+    }
+	
+	footer {
+        background-color: #f7a8b8;
+        color:#000000;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 20px;
+        font-family: 'Courier New', monospace;
+	}
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="productos">
+    <h2>Ropa para Hombres</h2>
+    <div class="producto">
+      <img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\71y4+YZ2IWL._AC_UY1000_.jpg" alt="Camisa">
+      <div>
+        <h3>Camisa Formal Azul</h3>
+        <p>Código: 12345<br>Material: Algodón premium</p>
+        <strong>$29.99</strong>
+        <button onclick="agregarAlCarrito('Camisa Formal Azul', 29.99)">Agregar al Carrito</button>
+      </div>
+    </div>
+    
+    <h2>Ropa para Niños</h2>
+    <div class="producto">
+      <img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\120758df-0d99-40be-b7c2-f3db8f21104c-removebg-preview.jpg" alt="Pantalón Niño">
+      <div>
+        <h3>Pantalón Deportivo</h3>
+        <p>Código: 56789<br>Material: Algodón elástico</p>
+        <strong>$19.99</strong>
+        <button onclick="agregarAlCarrito('Pantalón Deportivo', 19.99)">Agregar al Carrito</button>
+      </div>
+    </div>
+    
+    <h2>Ropa para Niñas</h2>
+    <div class="producto">
+      <img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\images.jpg" alt="Vestido Niña">
+      <div>
+        <h3>Vestido Floral</h3>
+        <p>Código: 67890<br>Material: Tela ligera</p>
+        <strong>$24.99</strong>
+        <button onclick="agregarAlCarrito('Vestido Floral', 24.99)">Agregar al Carrito</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="carrito">
+    <h2>🛒 Carrito de Compras</h2>
+    <p><strong>Total: $<span id="total">0.00</span></strong></p>
+    <ul id="lista-carrito"></ul>
+    <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+  </div>
+</div>
+
+<script>
+  let total = 0;
+  function agregarAlCarrito(producto, precio) {
+    total += precio;
+    document.getElementById("total").textContent = total.toFixed(2);
+    let item = document.createElement("li");
+    item.textContent = `${producto} - $${precio.toFixed(2)}`;
+    document.getElementById("lista-carrito").appendChild(item);
+  }
+  function vaciarCarrito() {
+    total = 0;
+    document.getElementById("total").textContent = "0.00";
+    document.getElementById("lista-carrito").innerHTML = "";
+  }
+</script>
+</section>
+ <a href="index.html">Volver al Índice</a>
+  </nav>
+</main>
+
+    <footer>
+        <p>&copy; 2025 Catálogo de Ropa | Moda para Todos</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio - Catálogo Jolie</title>
+  <style>
+  body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff; /* Color más fresco y moderno */
+      color: #333;
+    }
+    header {
+      background-color: #ff5c8d; /* Rosa fuerte vibrante */
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+      font-family: 'Garamond', serif;
+    }
+    .catalogos {
+      padding: 2rem;
+      text-align: center;
+    }
+    .catalogos h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .catalogos-container {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .catalogo {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .catalogo:hover {
+      transform: scale(1.05);
+    }
+    .catalogo img {
+      width: 100%;
+    }
+    .catalogo-info {
+      padding: 1rem;
+    }
+    .buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.7rem 1.2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      color: #fff;
+      transition: background 0.3s;
+    }
+    .btn-ver {
+      background-color: #4CAF50;
+    }
+    .btn-ver:hover {
+      background-color: #45a049;
+    }
+    .btn-descargar {
+      background-color: #2196F3;
+    }
+    .btn-descargar:hover {
+      background-color: #1976D2;
+    }
+    .moda-jolie {
+      padding: 2rem;
+      text-align: center;
+      background: #fce4ec;
+    }
+    .moda-jolie h2 {
+      font-size: 2.5rem;
+      color: #ff4081;
+      margin-bottom: 1.5rem;
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      justify-content: center;
+    }
+    .galeria .imagen img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .galeria .imagen img:hover {
+      transform: scale(1.1);
+    }
+	footer {
+      background-color: #f7a8b8;
+      color: #000000;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 20px;
+      font-family: 'Courier New', monospace;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bienvenido a Catálogo Jolie</h1>
+  </header>
+  <div class="catalogos-container">
+    <!-- Primer catálogo -->
+    <div class="catalogo">
+      <img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\Imagen de WhatsApp 2025-02-05 a las 21.33.53_3233df39.jpg"" alt="Catálogo 1">
+      <div class="catalogo-info">
+        <h3>Catálogo 0225</h3>
+        <p>Preventa - Descubre la nueva colección.</p>
+        <div class="buttons">
+          <a href="https://catalogojolie.com/assets/catalogo/CATJO1624.pdf" class="btn-ver" target="_blank">Ver Catálogo</a>
+          <a href="https://catalogojolie.com/assets/catalogo/CATJO0225.pdf" class="btn-descargar" download>Descargar</a>
+        </div>
+      </div>
+    </div>
+    <!-- Segundo catálogo -->
+    <div class="catalogo">
+      <img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\Imagen de WhatsApp 2025-02-05 a las 21.29.34_767deefc.jpg" alt="Catálogo 2">
+      <div class="catalogo-info">
+        <h3>Catálogo Vacaciones</h3>
+        <p>Looks inolvidables para este verano.</p>
+        <div class="buttons">
+          <a href="https://catalogojolie.com/assets/catalogo/CATJO0224.pdf" class="btn-ver" target="_blank">Ver Catálogo</a>
+          <a href="https://catalogojolie.com/assets/catalogo/CATJO0224.pdf" class="btn-descargar" download>Descargar</a>
+        </div>
+ </div>
+    </div>
+    <!-- Tercer catálogo -->
+    <div class="catalogo">
+      <img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\Imagen de WhatsApp 2025-02-05 a las 21.27.38_5f8305be.jpg" alt="Catálogo 3">
+      <div class="catalogo-info">
+        <h3>Catálogo San Valentín</h3>
+        <p>Ama, Amistad y Outfit perfectos.</p>
+        <div class="buttons">
+          <a href="https://catalogojolie.com/assets/catalogo/CATJO0225.pdf" class="btn-ver" target="_blank">Ver Catálogo</a>
+          <a href="https://catalogojolie.com/assets/catalogo/CATJO0225.pdf"class="btn-descargar" download>Descargar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <section class="moda-jolie" id="moda-jolie">
+    <h2>Moda Jolie</h2>
+    <div class="galeria">
+      <div class="imagen"><img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\1239108-1.jpg" alt="Moda 1"></div>
+      <div class="imagen"><img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\1136923-2.jpg" alt="Moda 2"></div>
+      <div class="imagen"><img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\1133535.jpg" alt="Moda 3"></div>
+	  <div class="imagen"><img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\1233509.jpg" alt="Moda 4"></div>
+	  </div>
+	  <div class="galeria">
+	  <div class="imagen"><img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\1237422-1.jpg" alt="Moda 5"></div>
+	  <div class="imagen"><img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\1139120-1.jpg"alt="Moda 6"></div>
+	  <div class="imagen"><img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\1237620-1.jpg" alt="Moda 7"></div>
+	  <div class="imagen"><img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\1233506-1.jpg" alt="Moda 8"></div>
+    </div>
+	 <nav>
+    <a href="index.html">Volver al Índice</a>
+  </nav>
+</main>
+
+<footer>
+  <p>Catalogo Jolie</p>
+</footer>
+
+</body>
+</html>
+  </section>
+</body>
+</html>

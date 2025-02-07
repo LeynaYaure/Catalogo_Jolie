@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Ropa 👗🛒</title>
+    
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            background-color: #ff4081;
+            color: white;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #d81b60;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            background-color: #c2185b;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #880e4f;
+        }
+
+        /* Secciones */
+        .content {
+            display: none;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Novedades */
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .catalog-item {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fefefe;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .catalog-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .catalog-item h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .catalog-item a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #c2185b;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+            transition: background-color 0.3s;
+        }
+
+        .catalog-item a:hover {
+            background-color: #880e4f;
+        }
+		footer {
+        background-color: #f7a8b8;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 20px;
+        font-family: 'Courier New', monospace;
+    }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll("nav a");
+            const sections = document.querySelectorAll(".content");
+
+            links.forEach(link => {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const sectionId = link.getAttribute("data-section");
+
+                    sections.forEach(section => {
+                        section.style.display = "none";
+                    });
+
+                    if (sectionId) {
+                        document.getElementById(sectionId).style.display = "block";
+                    }
+                });
+            });
+
+            // Mostrar la primera sección por defecto
+            document.getElementById("catalogo").style.display = "block";
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Catálogo de Ropa 👗🛒</h1>
+        <p>¡Descubre las últimas tendencias en moda para todas las tallas! 🌟</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" data-section="catalogo">Catálogo</a></li>
+            <li><a href="#" data-section="novedades">Novedades</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección Catálogo -->
+    <section id="catalogo" class="content">
+        <h2>🛒 Nuestro Catálogo</h2>
+        <img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\istockphoto-1208148708-612x612.jpg"alt="Ropa de Moda">
+        <p>Explora nuestra variedad de ropa de calidad. Tenemos prendas para todas las tallas y estilos tanto para niños como para caballeros. También pueden encontrar zapatos de diferentes modelos.</p>
+        <p>📄 Consulta nuestro catálogo completo aquí: 
+            <a href="https://www.catalogojolie.com/assets/catalogo/catalogo.pdf" target="_blank" style="color: #c2185b; font-weight: bold;">
+                Ver Catálogo
+            </a>
+        </p>
+    </section>
+
+    <!-- Sección Novedades -->
+    <section id="novedades" class="content">
+        <h2>🔥 Novedades</h2>
+
+        <div class="catalog-grid">
+            <div class="catalog-item">
+                <img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\Imagen de WhatsApp 2025-02-06 a las 21.32.18_d0472fd2.jpg" alt="Catálogo Invierno">
+                <h3>Invierno</h3>	
+           <a href="https://cdn-img.andrea.com/us/assets/downloads/3/DestellosInvierno.pdf" target="_blank" style="color: #000000; font-weight: bold;">
+                Ver Catálogo
+            </a>
+            </div>
+
+            <div class="catalog-item">
+                <img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\Imagen de WhatsApp 2025-02-06 a las 21.48.33_d651c855.jpg" alt="Catálogo Otoño Completo">
+                <h3>Otoño Completo</h3>
+                <a href="https://cdn-img.andrea.com/us/assets/downloads/3/AndreaUSA.pdf" target="_blank" style="color: #000000; font-weight: bold;">
+                Ver Catálogo
+            </a>
+            </div>
+
+            <div class="catalog-item">
+                <img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\Imagen de WhatsApp 2025-02-06 a las 21.53.40_658722d5 (1).jpg"alt="Calzado De Caballero">
+                <h3>Calzado Dama</h3>
+                <a href="https://cdn-img.andrea.com/us/assets/downloads/3/CalzadoCaballero.pdf" target="_blank" style="color: #000000; font-weight: bold;">
+                Ver Catálogo
+            </a>
+            </div>
+
+            <div class="catalog-item">
+                <img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\Imagen de WhatsApp 2025-02-06 a las 22.00.57_029fb01e.jpg" alt="San Valentín">
+                <h3>San Valentín</h3>
+                <a href="file:///C:/Users/USER%20HP/Downloads/Promotor__Andrea__San_Valentn.pdf target="_blank" style="color: #000000; font-weight: bold;">
+                Ver Catálogo
+            </a>
+            </div>
+
+            <div class="catalog-item">
+                <img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\Imagen de WhatsApp 2025-02-06 a las 22.03.01_0582391c.jpg" alt="Infantil">
+                <h3>Infantil</h3>
+               <a href="https://cdn-img.andrea.com/us/assets/downloads/3/Infantil.pdf"_blank" style="color: #000000; font-weight: bold;">
+                Ver Catálogo
+            </div>
+        </div>
+    </section>
+ <a href="index.html">Volver al Índice</a>
+  </nav>
+</main>
+
+    <footer>
+        <p>&copy; 2025 Catálogo de Ropa | Moda para Todos</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
