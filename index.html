@@ -19,12 +19,12 @@
       font-family: 'Garamond', serif;
     }
     header img.logo {
-      max-width: 10px;
+      max-width: 100px;
       margin-top: 10px;
       margin-bottom: 10px;
     }
     nav {
-      background-color: #ff1493; /* Rosa encendido */
+      background-color: #ff1493;
       text-align: center;
       padding: 1rem;
       font-family: 'Verdana', sans-serif;
@@ -35,21 +35,16 @@
       text-decoration: none;
       font-size: 1.5rem;
       margin: 0 30px;
-      display: inline-flex;
-      align-items: center;
-      font-weight: bold !important;
-      position: relative;
-      padding-left: 40px;
-      transition: all 0.3s ease;
-      border: 2px solid transparent;
-      border-radius: 8px;
+      display: inline-block;
+      font-weight: bold;
       padding: 10px 20px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
     }
     nav a:hover {
       color: #ff85a2;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
       background-color: #fff;
-      border-color: #ff85a2;
+      border: 2px solid #ff85a2;
     }
     .introduccion {
       padding: 2rem;
@@ -60,10 +55,6 @@
       font-size: 1.2rem;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .introduccion h2 {
-      color: #f7a8b8;
-      font-size: 2.5rem;
     }
     .galeria {
       display: flex;
@@ -81,7 +72,8 @@
       transition: transform 0.3s ease;
     }
     .galeria .imagen img {
-      width: 50%;
+      width: 100%;
+      max-width: 200px;
       height: auto;
       display: block;
     }
@@ -103,36 +95,35 @@
 
 <header>
   <h1>Catálogo Jolie - Moda Exclusiva</h1>
-  <img src="imagenes/Logo.jpg" alt="Logo">
+  <img src="imagenes/Logo.jpg" alt="Logo" class="logo">
 </header>
 
-<nav class="menu-horizontal">
+<nav>
   <a href="inicio.html" class="inicio">Inicio</a>
   <a href="jolie.html" class="jolie">Jolie</a>
-  <a href="Catálogo de Productos.html" class="consultas">Catálogo de Productos</a>
-  <a href="carrito de compras.html" class="pedidos">Carrito de Compras</a>
+  <a href="catalogo-productos.html" class="consultas">Catálogo de Productos</a>
+  <a href="carrito-compras.html" class="pedidos">Carrito de Compras</a>
   <a href="contacto.html" class="contacto">Contacto</a>
-  <a href="sobre nosotros.html" class="sobre nosotros">Sobre Nosotros</a>
+  <a href="sobre-nosotros.html" class="sobre-nosotros">Sobre Nosotros</a>
 </nav>
 
 <div class="introduccion">
   <h2>Explora nuestra exclusiva colección de moda</h2>
-  <p>Desde trajes de baño hasta ropa formal para caballeros, tenemos lo que necesitas para cada ocasión. En Catálogo Jolie nos especializamos en ofrecer prendas de alta calidad, diseñadas para brindarte comodidad, elegancia y estilo en todo momento. Nuestro catálogo está pensado para aquellos que buscan lo mejor en moda, con una amplia variedad de opciones que se adaptan a cada personalidad y tendencia.</p>
-  <p>Descubre nuestra selección de trajes de baño con diseños innovadores y materiales resistentes para que disfrutes del verano con confianza. Para los caballeros, ofrecemos una línea de ropa formal y casual que combina la sofisticación con la comodidad. También contamos con vestidos elegantes y conjuntos modernos que realzan tu belleza en cualquier evento especial. ¡Déjate inspirar y renueva tu guardarropa con lo mejor de Jolie!</p>
+  <p>Desde trajes de baño hasta ropa formal para caballeros, tenemos lo que necesitas para cada ocasión.</p>
 </div>
 
 <div class="galeria">
   <div class="imagen">
-    <img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\224018648-woman-summer-travel-sea-happy-tourist-in-blue-bikini-enjoy-taking-picture-outdoors-for-memories.jpg"" alt="Traje de Baño">
+    <img src="imagenes/traje-bano.jpg" alt="Traje de Baño">
   </div>
   <div class="imagen">
-    <img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\hkt-ss24-keyseasonalstories-d4-high-res-jpg-srgb-300-dpi-2-66681fbf616e7.jpg"alt="Ropa de Caballero">
+    <img src="imagenes/ropa-caballero.jpg" alt="Ropa de Caballero">
   </div>
   <div class="imagen">
-    <img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\WhatsApp-Image-2024-05-19-at-8.51.55-AM.jpeg" alt="Vestido Elegante">
+    <img src="imagenes/vestido-elegante.jpg" alt="Vestido Elegante">
   </div>
   <div class="imagen">
-    <img src="C:\Users\USER HP\OneDrive\Documentos\ROPA\descarga (4).jpeg"alt="Moda Casual">
+    <img src="imagenes/moda-casual.jpg" alt="Moda Casual">
   </div>
 </div>
 
